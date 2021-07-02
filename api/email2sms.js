@@ -21,7 +21,7 @@ module.exports = async (req, res) => {
 
     //Sending SMS with Twilio Client
     client.messages.create({
-        to: `+${toName}`,
+        to: `${toName}`,
         from: process.env.TWILIO_PHONE_NUMBER,
         body: `Message from:${fromName}\n${body}`
     }).then(msg => {
@@ -37,7 +37,7 @@ module.exports = async (req, res) => {
             to: fromAddress.address,
             from: toAddress.address,
             subject: `Error Sending SMS to ${toAddress.local}`,
-            text: `${err}\n For email from ${fromAddress.address}`,
+            text: `${err}\n For email from ${fromAddress.address} with toName ${toName}`,
         };
         //Send Email
         sgResp = sgMail.send(email)
