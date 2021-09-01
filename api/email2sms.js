@@ -24,12 +24,8 @@ module.exports = async (req, res) => {
         to: `+${toName}`,
         console.log(toName),
         from: process.env.TWILIO_PHONE_NUMBER,
-        body: `ALERT: ${body}`,
-            console.log(body),
-            console.log(fromAddress),
-            console.log(fromName),
-            console.log(toAddress),
-            console.log(toName)
+        body: `ALERT: ${body} $(fromAddress) $(toAddress)`,
+      
     }).then(msg => {
         console.log(msg)
         res.status(200).send(msg.sid);
