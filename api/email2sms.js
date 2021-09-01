@@ -22,9 +22,9 @@ module.exports = async (req, res) => {
     //Sending SMS with Twilio Client
     client.messages.create({
         to: `+${toName}`,
-        console.log(toName),
+        console.log('THIS IS A CONSOLE LOG ENTRY'+toName),
         from: process.env.TWILIO_PHONE_NUMBER,
-        body: `ALERT: ${body} $(fromAddress) $(toAddress)`,
+        body: `ALERT: ${body} $(fromAddress) $(toAddress)`
       
     }).then(msg => {
         console.log(msg)
