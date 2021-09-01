@@ -22,10 +22,10 @@ module.exports = async (req, res) => {
     console.log("*****FROM NAME***** "+fromName);
     console.log("*****FROM***** "+from);
     console.log("*****TO***** "+to);
-    if (toName != "14158238255" && fromName != "mw.alerts")
+        if (fromName != "mw.alerts")
         console.log("#######NOT VALIDATED-FAIL########")
         return;
-   console.log("^^^^^PASSED VALIDATION^^^^^^^");
+   console.log("###PASSED VALIDATION###");
     //Sending SMS with Twilio Client
     client.messages.create({
         to: `+${toName}`,
