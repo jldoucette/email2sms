@@ -19,7 +19,7 @@ module.exports = async (req, res) => {
     const fromAddress = addrs.parseOneAddress(from);
     const fromName = fromAddress.local;
     console.log('*****TO ADDRESS*****' toAddress);
-    console.log('*****TO NAME***** toName);
+    console.log('*****TO NAME*****' toName);
     console.log('*****FROM ADDRESS*****' fromAddress);
     console.log('*****FROM NAME*****' fromName);
     console.log('*****FROM*****' from);
