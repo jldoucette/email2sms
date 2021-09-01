@@ -18,7 +18,13 @@ module.exports = async (req, res) => {
     const toName = toAddress.local;
     const fromAddress = addrs.parseOneAddress(from);
     const fromName = fromAddress.local;
-
+    console.log(toAddress);
+    console.log(toName);
+    console.log(fromAddress);
+    console.log(fromName);
+    console.log(from);
+    console.log(to);
+    
     //Sending SMS with Twilio Client
     client.messages.create({
         to: `+${toName}`,
