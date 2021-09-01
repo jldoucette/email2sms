@@ -22,8 +22,14 @@ module.exports = async (req, res) => {
     //Sending SMS with Twilio Client
     client.messages.create({
         to: `+${toName}`,
+        console.log(toName),
         from: process.env.TWILIO_PHONE_NUMBER,
-        body: `ALERT: ${body}`
+        body: `ALERT: ${body}`,
+            console.log(body),
+            console.log(fromAddress),
+            console.log(fromName),
+            console.log(toAddress),
+            console.log(toName)
     }).then(msg => {
         console.log(msg)
         res.status(200).send(msg.sid);
