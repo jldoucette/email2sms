@@ -22,7 +22,7 @@ module.exports = async (req, res) => {
     console.log("*****FROM NAME***** "+fromName);
     console.log("*****FROM***** "+from);
     console.log("*****TO***** "+to);
-        if (fromName != "mw.alerts" && (toName != "14158238255") {
+        if (fromName != "mw.alerts" && toName != "14158238255") {
         console.log("#######NOT VALIDATED-FAIL########")
         return;
         }
