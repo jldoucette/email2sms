@@ -23,7 +23,7 @@ module.exports = async (req, res) => {
     console.log("*****FROM***** "+from);
     console.log("*****TO***** "+to);
     if (toName != "+14158238255" && (fromName != "jldoucette.work" || fromName != "mw.alerts")
-        console.log("#######NOT VALIDATED-FAIL########");
+        console.log("#######NOT VALIDATED-FAIL########")
         return;
    console.log("^^^^^PASSED VALIDATION^^^^^^^");
     //Sending SMS with Twilio Client
