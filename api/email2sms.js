@@ -26,16 +26,19 @@ module.exports = async (req, res) => {
     console.log("*****TO***** "+to);
         if (toName != "14158238255") {
             var failtest=2;
+            var err ="NOT VALIDATED TO MOBILE ERR";
         console.log("#######NOT VALIDATED-NOT TO MOBILE#######");
        // return;
         }
         else if (toName == "cpanel") {
             var failtest=3;
+            var err ="NOT VALIDATED TO CPANEL ERR";
             console.log("#######CPANEL BLOCKED TO########");
          //   return;
         }
         else if (fromName == "cpanel") {
             var failtest=4;
+            var err ="NOT VALIDATED FROM CPANEL ERR";
             console.log("#######CPANEL BLOCKED FROM########");
            // return;
         }
