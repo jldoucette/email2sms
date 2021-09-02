@@ -29,6 +29,7 @@ module.exports = async (req, res) => {
         else if (toName= "cpanel" || fromName="cpanel") {
             console.log("#######CPANEL BLOCKED########")
             return;
+        }
     else {
    console.log("###PASSED VALIDATION###");}
     
