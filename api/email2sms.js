@@ -58,5 +58,14 @@ module.exports = async (req, res) => {
     }
     if (failtest > 1) {
         console.log("***NO VALID ERROR ROUTE--END***"+err);
+            client.messages.create({
+        body: `ALERT: ${body}`
+      
+    }).then(msg => {
+        console.log("NOT SENDING"+msg);
+    }).catch(err => {
+        console.log(err);
+          });
+    }
           };
 };
