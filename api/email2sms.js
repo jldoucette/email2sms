@@ -13,7 +13,7 @@ module.exports = async (req, res) => {
     const subject = req.body.subject;
     const body = req.body.text;
     
-    let failtest = 1;
+    var failtest = 1;
 
     //Using email-addresses library to extract email details.
     const toAddress = addrs.parseOneAddress(to);
@@ -26,17 +26,17 @@ module.exports = async (req, res) => {
     console.log("*****TO***** "+to);
         if (toName != "14158238255") {
         console.log("#######NOT VALIDATED-NOT TO MOBILE#######");
-        let failtest=2;
+        var failtest=2;
        // return;
         }
         else if (toName= "cpanel") {
             console.log("#######CPANEL BLOCKED TO########");
-         let failtest=3;
+         var failtest=3;
          //   return;
         }
         else if (fromName = "cpanel") {
             console.log("#######CPANEL BLOCKED FROM########");
-            let failtest=4;
+            var failtest=4;
            // return;
         }
     else {
