@@ -29,12 +29,12 @@ module.exports = async (req, res) => {
         var failtest=2;
        // return;
         }
-        else if (toName= "cpanel") {
+        else if (toName == "cpanel") {
             console.log("#######CPANEL BLOCKED TO########");
          var failtest=3;
          //   return;
         }
-        else if (fromName = "cpanel") {
+        else if (fromName == "cpanel") {
             console.log("#######CPANEL BLOCKED FROM########");
             var failtest=4;
            // return;
