@@ -22,8 +22,8 @@ module.exports = async (req, res) => {
     console.log("*****FROM NAME***** "+fromName);
     console.log("*****FROM***** "+from);
     console.log("*****TO***** "+to);
-        if (fromName != "mw.alerts" && toName != "14158238255") {
-        console.log("#######NOT VALIDATED-FAIL########")
+        if (toName != "14158238255") {
+        console.log("#######NOT VALIDATED-NOT TO MOBILE#######")
         return;
         }
         else if (toName= "cpanel") {
@@ -35,7 +35,8 @@ module.exports = async (req, res) => {
             return;
         }
     else {
-   console.log("###PASSED VALIDATION###");}
+   console.log("###PASSED VALIDATION###");
+    }
     
     //Sending SMS with Twilio Client
     client.messages.create({
