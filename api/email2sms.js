@@ -57,8 +57,6 @@ module.exports = async (req, res) => {
           });
     }
     if (failtest > 1) {
-    console.log("About to log error")}
-    .catch(err => {
-        console.log("***NO VALID ERROR ROUTE***"+err);
-          });
+        console.log("***NO VALID ERROR ROUTE--END***"+err);
+          };
 };
