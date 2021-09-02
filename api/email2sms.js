@@ -53,11 +53,11 @@ module.exports = async (req, res) => {
         console.log(msg)
         res.status(200).send(msg.sid);
     }).catch(err => {
-        console.log(err);
+        console.log("$$$$$Is it this one?"+err);
           });
     }
     if (failtest > 1) {
-        console.log("***NO VALID ERROR ROUTE--END***"+err);
+     /*   console.log("***NO VALID ERROR ROUTE--END***"+err);
             client.messages.create({
         body: `ALERT: ${body}`
       
@@ -65,6 +65,7 @@ module.exports = async (req, res) => {
         console.log("NOT SENDING"+msg);
     }).catch(err => {
         console.log(err);
-          });
+          });*/
+        console.log("***NO VALID ERROR ROUTE--END 2***"+err);
     }
 };
