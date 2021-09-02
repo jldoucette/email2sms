@@ -36,7 +36,7 @@ module.exports = async (req, res) => {
         }
     else {
    console.log("###PASSED VALIDATION###");
-    }
+    
     
     //Sending SMS with Twilio Client
     client.messages.create({
@@ -49,5 +49,9 @@ module.exports = async (req, res) => {
         res.status(200).send(msg.sid);
     }).catch(err => {
         console.log(err);
+          });
+    }
+    .catch(err => {
+        console.log("**NO MSG ERR**"+err);
           });
 };
