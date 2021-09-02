@@ -23,16 +23,16 @@ module.exports = async (req, res) => {
     console.log("*****FROM***** "+from);
     console.log("*****TO***** "+to);
         if (toName != "14158238255") {
-        console.log("#######NOT VALIDATED-NOT TO MOBILE#######")
-        return;
+        console.log("#######NOT VALIDATED-NOT TO MOBILE#######");
+       // return;
         }
         else if (toName= "cpanel") {
-            console.log("#######CPANEL BLOCKED TO########")
-            return;
+            console.log("#######CPANEL BLOCKED TO########");
+         //   return;
         }
         else if (fromName = "cpanel") {
-            console.log("#######CPANEL BLOCKED FROM########")
-            return;
+            console.log("#######CPANEL BLOCKED FROM########");
+           // return;
         }
     else {
    console.log("###PASSED VALIDATION###");
@@ -51,7 +51,7 @@ module.exports = async (req, res) => {
         console.log(err);
           });
     }
-    .catch(err => {
-        console.log("**NO MSG ERR**"+err);
+    catch(err => {
+        console.log("***NO VALID ERROR ROUTE***"+err);
           });
 };
