@@ -12,6 +12,8 @@ module.exports = async (req, res) => {
     const to = req.body.to;
     const subject = req.body.subject;
     const body = req.body.text;
+    
+    const failtest = 1;
 
     //Using email-addresses library to extract email details.
     const toAddress = addrs.parseOneAddress(to);
@@ -24,14 +26,17 @@ module.exports = async (req, res) => {
     console.log("*****TO***** "+to);
         if (toName != "14158238255") {
         console.log("#######NOT VALIDATED-NOT TO MOBILE#######");
+        const failtest=2;
        // return;
         }
         else if (toName= "cpanel") {
             console.log("#######CPANEL BLOCKED TO########");
+            const failtest=3;
          //   return;
         }
         else if (fromName = "cpanel") {
             console.log("#######CPANEL BLOCKED FROM########");
+            const failtest=4;
            // return;
         }
     else {
@@ -51,7 +56,9 @@ module.exports = async (req, res) => {
         console.log(err);
           });
     }
-    catch(err => {
+    if (failtest > 1) {
+    console.log("About to log error")}
+    .catch(err => {
         console.log("***NO VALID ERROR ROUTE***"+err);
           });
 };
