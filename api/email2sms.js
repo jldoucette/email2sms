@@ -25,18 +25,18 @@ module.exports = async (req, res) => {
     console.log("*****FROM***** "+from);
     console.log("*****TO***** "+to);
         if (toName != "14158238255") {
+            var failtest=2;
         console.log("#######NOT VALIDATED-NOT TO MOBILE#######");
-        var failtest=2;
        // return;
         }
         else if (toName == "cpanel") {
+            var failtest=3;
             console.log("#######CPANEL BLOCKED TO########");
-         var failtest=3;
          //   return;
         }
         else if (fromName == "cpanel") {
-            console.log("#######CPANEL BLOCKED FROM########");
             var failtest=4;
+            console.log("#######CPANEL BLOCKED FROM########");
            // return;
         }
     else {
