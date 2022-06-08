@@ -2,7 +2,6 @@ const util = require('util');
 const multer = require('multer');
 const addrs = require("email-addresses");
 const sgMail = require('@sendgrid/mail');
-
 const twilio = require('twilio');
 
 module.exports = async (req, res) => { 
@@ -21,6 +20,7 @@ module.exports = async (req, res) => {
     const toName = toAddress.local;
     const fromAddress = addrs.parseOneAddress(from);
     const fromName = fromAddress.local;
+/* REMOVED 23-48 FOR TESTING OF FUNCTION JLD
     console.log("*****TO NAME***** "+toName);
     console.log("*****FROM NAME***** "+fromName);
     console.log("*****FROM***** "+from);
@@ -45,7 +45,7 @@ module.exports = async (req, res) => {
         }
     else {
    console.log("###PASSED VALIDATION###");
-    
+  */  
     
     //Sending SMS with Twilio Client
     client.messages.create({
@@ -60,7 +60,8 @@ module.exports = async (req, res) => {
         console.log("$$$$$Is it this one?"+err);
           });
     }
-    if (failtest > 1) {
+/* REMOVED 63-75 FOR TESTING FUNCTION JLD 6/8/22 
+if (failtest > 1) {
      /*   console.log("***NO VALID ERROR ROUTE--END***"+err);
             client.messages.create({
         body: `ALERT: ${body}`
@@ -69,7 +70,7 @@ module.exports = async (req, res) => {
         console.log("NOT SENDING"+msg);
     }).catch(err => {
         console.log(err);
-          });*/
+          });
         console.log("***NO VALID ERROR ROUTE--END 2***"+err);
-    }
+    } */
 };
