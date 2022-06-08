@@ -60,7 +60,7 @@ module.exports = async (req, res) => {
         console.log("$$$$$Is it this one?"+err);
           });
     }
-/* REMOVED 63-75 FOR TESTING FUNCTION JLD 6/8/22 
+/* REMOVED 63-76 FOR TESTING FUNCTION JLD 6/8/22 65-73 ALREADY OUT 
 if (failtest > 1) {
      /*   console.log("***NO VALID ERROR ROUTE--END***"+err);
             client.messages.create({
@@ -72,5 +72,5 @@ if (failtest > 1) {
         console.log(err);
           });
         console.log("***NO VALID ERROR ROUTE--END 2***"+err);
-    } */
-};
+    } 
+};*/
