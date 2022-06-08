@@ -1,3 +1,4 @@
+console.log ("STARTING EMAIL2SMS APP");
 const util = require('util');
 const multer = require('multer');
 const addrs = require("email-addresses");
